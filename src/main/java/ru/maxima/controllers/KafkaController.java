@@ -19,11 +19,8 @@ public class KafkaController {
 
     @PostMapping("/kafka")
     public ResponseEntity<String> sendMessage(@RequestParam("key") String message) {
-
         producer.writeMsg(message);
 
         return ResponseEntity.ok().body(message);
     }
-
-
 }
